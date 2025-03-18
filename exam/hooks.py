@@ -244,3 +244,9 @@ doc_events = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+	{
+		"dt": "Workflow",
+		"filters": [["name", "in", ["Purchase Invoice Approval", "Approval Logs"]]]
+	}
+]
