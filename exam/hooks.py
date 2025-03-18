@@ -248,5 +248,10 @@ fixtures = [
 	{
 		"dt": "Workflow",
 		"filters": [["name", "in", ["Purchase Invoice Approval", "Approval Logs"]]]
+	},
+
+	{
+        "dt": "Client Script",
+		"filters": [["name", "in", ["Sales order Permission"]]]
 	}
 ]

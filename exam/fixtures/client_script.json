@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Order",
+  "enabled": 1,
+  "modified": "2025-03-17 19:56:16.239094",
+  "module": "exam",
+  "name": "Sales order Permission",
+  "script": "frappe.ui.form.on('Sales Order', {\n\trefresh(frm) {\n\t\tif (frappe.user.has_role('Sales Manager')){\n\t\t    frm.set_df_property('additional_discount_percentage', 'read_only', 0);\n\t\t    frm.set_df_property('additional_discount_percentage', 'hidden', 0);\n\t\t} else {\n\t\t    frm.set_df_property('additional_discount_percentage', 'hidden', 1);\n\t\t}\n\t\tif (frappe.user.has_role('Accountant')){\n\t\t    frm.set_df_property('total_taxes_and_charges', 'read_only', 1);\n\t\t    frm.set_df_property('total_taxes_and_charges', 'hidden', 0);\n\t\t} else {\n\t\t    frm.set_df_property('total_taxes_and_charges', 'hidden', 1);\n\t\t}\n\t}\n})",
+  "view": "Form"
+ }
+]
